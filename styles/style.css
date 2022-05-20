@@ -1,0 +1,253 @@
+html {
+  --color-blue-100: #f7f7ff;
+  --color-blue-200:#9191ff4d;
+  --color-blue-300: #9191ff;
+  --color-blue-500: #0000f7;
+  --color-blue-700: #00004dc2;
+  --color-blue-800: #00001a3b; /* input border */
+  --color-blue-900: #00001a;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--color-blue-100);
+}
+
+p {
+  color: var(--color-blue-900);
+}
+
+header {
+  background-color: var(--color-blue-300);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  color: var(--color-blue-100);
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+@media all and (max-width:560px){
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+header p {
+  color: var(--color-blue-100);
+}
+
+button.mainstyle {
+  font: inherit;
+  background-color: var(--color-blue-500);
+  color: var(--color-blue-100);
+  padding: 8px 25px;
+  margin: 20px 2px;
+  border: 1px solid var(--color-blue-500);
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 3px 3px #00001a0c;
+  transition: transform 0.3s ease-in-out;
+}
+button.mainstyle:hover {
+  font: inherit;
+  background-color: var(--color-blue-100);
+  color: var(--color-blue-500);
+  padding: 8px 25px;
+  margin: 20px 5px;
+  border: 1px solid var(--color-blue-500);
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 3px 3px #00001a0c;
+  transform: scale(1.05);
+}
+
+button.altstyle {
+  font: inherit;
+  background-color: var(--color-blue-100);
+  color: var(--color-blue-500);
+  padding: 8px 25px;
+  margin: 20px 5px;
+  border: 1px solid var(--color-blue-500);
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 3px 3px #00001a0c;
+  transition: transform 0.3s ease-in-out;
+}
+button.altstyle:hover {
+  font: inherit;
+  background-color: var(--color-blue-500);
+  color: var(--color-blue-100);
+  padding: 8px 25px;
+  margin: 20px 5px;
+  border: 1px solid var(--color-blue-500);
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 3px 3px #00001a0c;
+  transform: scale(1.05);
+}
+
+button.linkstyle {
+  font: inherit;
+  background-color: transparent;
+  color: var(--color-blue-500);
+  text-decoration: underline;
+  padding: 8px 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+button.linkstyle:hover {
+  font: inherit;
+  background-color: transparent;
+  color: var(--color-blue-500);
+  text-decoration: underline;
+  font-weight: 600;
+  padding: 8px 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: none;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/* player configuration */
+#formodal input {
+  display: block;
+  margin: 10px auto;
+  height: 1.7rem;
+  width: 15rem;
+  border: 1px solid var(--color-blue-800);
+  border-radius: 5px;
+}
+
+.error input {
+  border-color: rgb(136,2,2);
+  color:rgb(136,2,2);
+  background-color: rgb(253, 219, 219);
+}
+
+.error label {
+  color:rgb(136,2,2);
+}
+
+
+/* game configuration */
+#game-configuration ul {
+  list-style: none;
+  display: flex;
+  justify-content:center;
+  padding-left:0px
+}
+
+#game-configuration li {
+    margin:20px;
+    background-color: var(--color-blue-200);
+    width:180px;
+    padding:2% 5%;
+    border-radius:5px;
+}
+
+@media all and (max-width:560px){
+    #game-configuration ul {
+        display: block;
+        padding-left:0px;
+        justify-content: center;
+      }
+      #game-configuration li {
+        width:80%;
+    }
+}
+
+article {
+    text-align:center;
+}
+
+#game-configuration article h2 {
+    font-size:medium;
+}
+
+#game-configuration article p {
+    font-size:1.8rem;
+    font-weight:900;
+    margin:5px;
+}
+
+#game-configuration div {
+    display:flex;
+    justify-content: center;
+}
+
+#game-configuration button {
+    font-size:1.5rem;
+    margin-top:5px;
+}
+
+@media all and (max-width:560px){
+    #game-configuration button {
+        font-size:1.2rem;
+    }
+}
+
+/* active game part */
+
+#active-game{
+    display:none;
+    text-align: center;
+}
+
+.winner{
+background-color: var(--color-blue-700);
+color: var(--color-blue-100);
+width:60%;
+text-align:center;
+margin:auto;
+padding:20px 5px;
+border-radius:5px;
+display:none;
+}
+.winner p {
+    color: var(--color-blue-100);
+}
+
+#active-game p {
+    font-weight: 700;
+}
+
+#game {
+    margin-top:30px;
+}
+
+#game ol {
+    list-style:none;
+    display:grid;
+    justify-content: center;
+    padding-left:0px;
+    gap:1rem;
+    grid-template-columns: repeat(3, 6rem);
+    grid-template-rows: repeat(3, 6rem);
+}
+
+#game li {
+    background-color: var(--color-blue-200);
+    cursor: pointer;
+    font-size:1.8rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game li:hover {
+    background-color: var(--color-blue-700);
+}
+
+#game li.disabled {
+    background-color: var(--color-blue-700);
+    cursor:default;
+    color:#f7f7ff;
+}
